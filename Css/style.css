@@ -1,0 +1,140 @@
+/*
+    seletor universal - todas as tags
+    reset CSS - reinica todas as propriedades dos elementos/tags
+*/
+* {
+    margin: 0;/* zera o espaçamento interno de todas as caixas/tags */
+    padding: 0;/* zera o espaçamento externo de todas as caixas/tags */
+    box-sizing: border-box;/* width é contado direto da borda da caixa */
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #727272;
+}
+
+.layout-grid {
+    width: 100%; /* largura da caixa div */
+    max-width: 1200px; /* limita a largura da caixa */
+    margin: 0 auto; /* topo e baixo 0 - laterais automáticas */
+    /*border: 3px dashed purple;*/
+}
+
+.header-flex {
+    /* elementos ficam em linha com o flex */
+    display: flex;
+    /* alinha os elementos de acordo com a linha */
+    justify-content: space-between;
+    /* alinha os elementos em coluna - contrário de justify-content */
+    align-items: center;
+}
+
+header {
+    background-color: #727272;
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    color: #e2e2e2;
+    transition: 1.5s;
+}
+
+h1 span {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-style: italic;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 50px;
+}
+
+a {
+    color: #e2e2e2; /* cor da fonte */
+    width: 60px; /* largura da caixa do link */
+    height: 100%; /* altura da caixa do link */
+    display: flex; /* forma de apresentação da tag/link na página - padrão em linhas*/
+    justify-content: center; /* alinha o conteúdo/caixas internas/filhas de acordo com a dieção do flex - aqui em linha */
+    align-items: center; /* alinha em conteúdo de no sentido contrário de align-items */
+    text-decoration: none; /* decoração do texto */
+    font-family: Verdana; /* família de fonte do link */
+    background-color: transparent; /* adicionado ; */
+    font-weight: 100; /* peso da fonte - espessura */
+    transition: background-color 1.5s; /* tempo de transição entre a cor de fundo atual para a nova cor */
+}
+
+a:hover {
+    background-color: rgb(45, 152, 245); /* pseudo-classe hover estado específico (ao passar do mouse) */
+}
+
+h1:hover {
+    color: rgb(45, 152, 245);
+}
+
+/*************MAIN*************/
+main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #e2e2e2;
+}
+
+.main-flex {
+    display: flex; 
+    flex-direction: row; /* eixo */
+    justify-content: space-between; /* alinha de acordo com o eixo - row */
+    align-items: flex-start; /* alinha no contrário do eixo - column */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+main section.cores-harmonia {
+    width: 80%;
+    background-color: white;
+}
+
+main section.cores-harmonia #img-lapis {
+    width: 100%;
+}
+
+main section.cores-harmonia h2,
+main section.cores-harmonia p {
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* coluna da direita */
+main aside.acoes-laterais {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 18%;
+    height: 670px;
+    background-color: white;
+}
+
+main aside.acoes-laterais div {
+    width: 100%;
+    height: 150px;
+    background-color: cadetblue;
+}
+
+#p3 {
+    margin-bottom: 40px;
+}
+
+footer {
+    height: 50px;   
+    display: flex;
+    align-items: center;
+    background-color: #727272;
+    color: #e2e2e2;
+}
+
+/*************FOOTER*************/
